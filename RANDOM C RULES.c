@@ -105,3 +105,15 @@ Other Rules
 
   // Now that we have given a space before %c, our program is fully correct and we don't need to worry about anything else.
   
+> While dividing a float value by any other number, you must put .0 behind that number, otherwise the required operation will not work.
+  Eg:
+  int a,b,c,d,e,f,total; // Suppose a,b,c,d,e,f are the six subjects which have their Full Marks of 75 except one subject which has 50 as Full Marks
+  float percentage;      // As above mentioned, subjects that have 75 F.M has 30 Pass Marks & one subject having 50 F.M has 20 Pass Marks
+  total = a+b+c+d+e+f;   // The total that is being calculated is the total marks that you gained from all these subjects
+  // Considering the above information, Our overall total is 425. The overall total means: The sum of F.M of all subjects.
+  percentage = (total/425)*100; // This will gather the percentage that we got on our subject
+  // But the issue is that, even though our above formula is correct, the result will be 0%
+  // It is because I've not mentioned .0 behind numbers. Because this is a float calculation, we need .0 behind numbers
+  // So the above mentioned is incorrect. Instead, it should be written as.........
+  percentage = (total/425.0)*100.0; // Now this is correct and it will calculate correct answer in points  
+  
