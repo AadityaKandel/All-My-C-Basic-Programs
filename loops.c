@@ -96,3 +96,50 @@ In while loop, the code to run comes after the condition
 In do while loop, the code will run at least once no matter what the conditon is
 In while loop, the code will only run if the given condition is True
 */
+
+// Let's move to for loop where we have more control of the variables
+
+#include <stdio.h>
+
+int main(){
+
+    int x,y;
+
+    printf("Program to print even numbers....\n");
+    printf("Enter up to which number to print even numbers: ");
+    scanf("%d",&y);
+
+    for(x=2;x<y;x=x+2){
+
+        printf("%d\n",x);
+    }
+}
+
+/*
+This is a simple program to print even numbers. How does it print even numbers? 
+Well, understanding the logic is very important in these codes.
+
+    for(x=2;x<y;x=x+2){
+
+        printf("%d\n",x);
+    }
+
+for(x=2;x<y;x=x+2) is saying that
+for(x is equal to 2; x is less than y; x is equal to x+2;){ // If this statement is True then execute the below code
+    printf("%d\n",x); // Print x on the screen
+}
+
+To clarify it even further,
+it is checking if your given conditions are True and if they are True, it will keep on running unless your statement becomes
+False. Logically, what will happen is that,
+
+for(x=2;x<y;x=x+2) // The C program will see this condition each time "for loop" will run
+// When it runs the first time, the value of x becomes 2
+// It checks the statement if x is less than y and if it is True then it executes the code below
+// printf("%d\n",x);     This will execute
+// Then, it increases the value of x by 2 and runs the "for loop" again.
+// This will keep on running until x becomes greater than y and when it does, the loop will end
+
+
+
+*/
