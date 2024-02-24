@@ -143,3 +143,33 @@ for(x=2;x<y;x=x+2) // The C program will see this condition each time "for loop"
 
 
 */
+
+/*
+Syntax for "for loop"
+
+for(initialization; condition; update_statement){
+    // code to run
+}
+
+int x,y;
+y = 100;
+
+for(x=0; x<y; x=x+1){
+    printf("%d",x);
+}
+
+Here, initialization is x = 0
+      condition is x<y
+      update_expression is x=x+1
+
+Differences:
+    Initialization occurs only once
+    Condition is checked more than once. It is checked as many times as the "for loop" runs
+    Update_expression is performed more than once. It is also done as many times as the "for loop" runs
+
+Actions:
+    1: Initialization initializes your variable. Initializing a variable means to give the variable their initial value
+    2: Condition checks it's conditions. If the conditions are True, it commands the "for loop" to run and if the 
+    conditions are False, it commands the "for loop" to stop.
+    3: Update Expression updates your variable each time "for loop" is executed.
+*/
