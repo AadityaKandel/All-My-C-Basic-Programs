@@ -82,4 +82,5 @@ int main(){
             printf("Wrong Option Selected...\n\n");
             break;
     }
+  return 0;
 }
