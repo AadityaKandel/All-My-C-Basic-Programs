@@ -25,6 +25,7 @@ int main(){
         printf("%d\n",i);
         i = i+1;
     }
+    return 0;
 }
 
 /*
@@ -72,6 +73,8 @@ int main(){
         i = i+1;
     }
     while(number>i);
+    return 0;
+}
 
 // Do while loop is simple
 /*
@@ -113,6 +116,7 @@ int main(){
 
         printf("%d\n",x);
     }
+    return 0;
 }
 
 /*
