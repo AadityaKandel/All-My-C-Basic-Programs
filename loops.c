@@ -55,3 +55,44 @@ When it finally stops, it will have printed 99 numbers
 
 // In summary, this will print all the numbers until it finally meets your input
 // If your input is 100, this will print all the numbers up to 100 and when it meets 100, it will stop
+
+
+// Lets go to do while loop
+
+#include <stdio.h>
+
+int main(){
+    int number, i;
+    i = 0;
+    printf("Enter the numbers to print starting from 0\n");
+    scanf("%d",&number);
+
+    do{
+        printf("%d\n",i);
+        i = i+1;
+    }
+    while(number>i);
+
+// Do while loop is simple
+/*
+You write the code within the do and condition inside the while
+Syntax:
+
+do{
+    // code
+}
+while(condition);
+
+The only difference between while loop and do while loop is that
+In do while loop, the code inside the do will run at first and then the condition inside the while is checked
+In while loop, the condition is checked first and the code is ran if the condition is True
+
+In do while loop, the code to run is written inside the do area
+In while loop, the code to run is written inside the while area
+
+In do while loop, the condition comes after the code to run
+In while loop, the code to run comes after the condition
+
+In do while loop, the code will run at least once no matter what the conditon is
+In while loop, the code will only run if the given condition is True
+*/
