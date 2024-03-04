@@ -83,3 +83,41 @@ int main(){
 }
 
 
+// 4: To check Prime Number
+#include <stdio.h>
+
+int main(){
+    // Program to check prime numbers
+    int number,quotient,divisor,checker;
+
+    divisor=2;
+    checker=0;
+
+    printf("Give a number to check if it is prime number or not?\n");
+    scanf("%d",&number);
+
+    // Logic start
+    while (divisor<=9){
+        quotient=number%divisor;
+        if (quotient == 0){
+            checker++;
+        } else {
+            ;
+        }
+        divisor++;
+    }
+
+    if (number==1)
+        checker+=2;
+
+    if (checker==0 || (checker==1 && number<10)){
+        printf("%d is a prime number",number);
+    } else {
+        printf("%d is not prime number",number);
+    }
+
+    // Logic end
+
+    return 0;
+}
+
