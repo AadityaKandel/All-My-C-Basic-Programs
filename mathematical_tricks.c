@@ -58,3 +58,28 @@ int main(){
     return 0;
 }
 
+// 3: Find the cube of each digits of a number and add them
+#include <stdio.h>
+#include <math.h>
+
+int main(){
+    // Program to find the cube of digits of a number
+    int number, NUMBER, reminder, cube;
+    printf("Enter a number to find cube of its digits\n");
+    scanf("%d",&number);
+    NUMBER=number;
+
+    while(number!=0){
+
+        reminder = number%10;
+        // cube = cube+(reminder*reminder*reminder); Alternative Way
+        cube = cube+pow(reminder, 3);
+        number = number/10;
+    }
+
+    printf("Cube of %d Digits is %d",NUMBER,cube);
+
+    return 0;
+}
+
+
