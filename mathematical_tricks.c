@@ -28,3 +28,27 @@ int main(){
 
     printf("%d is the reversed number of %d",reversedNum,ORIGINAL);
 }
+
+// 2: Sum of digits of a number
+#include <stdio.h>
+
+int main(){
+    // Sum of Digits of A Number
+    int number, reminder, sum, NUMBER;
+    printf("Enter a number to add its digits\n");
+    scanf("%d",&number);
+    NUMBER=number;
+
+    // Logic starts
+    while (number!=0){
+        reminder = number % 10;
+        sum = sum+reminder;
+        number = number / 10;
+    }
+    // Logic ends
+
+    printf("%d is the sum of digits of %d",sum,NUMBER);
+
+    return 0;
+}
+
