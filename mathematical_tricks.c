@@ -5,6 +5,12 @@ Reversing and checking if Reverse will be the same number (Palindrome)
 Checking if Cube of All Digits of A Number becomes the same number and so on
 */
 
+/*
+Note: I haven't included these in separate functions. Thus, copying all
+will result in compilation error. Hence, you can copy each function one
+by one and paste in different file or create a function for yourself
+*/
+
 
 // 1: To find a reverse of a number
 #include <stdio.h>
