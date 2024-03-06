@@ -1,9 +1,9 @@
-// There are few issues. They'll be solved soon
+// All Issues Are Fixed
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <math.h>
-#include <stdbool.h>
+#include <stdio.h> // Usual header file for input and output
+#include <stdlib.h> // For using the system() function where I can use cmd commands
+#include <math.h> // For using the pow() function for doing power calculation (i.e square, cube & more)
+#include <stdbool.h> // For using bool data type
 
 int cls(){
     system("cls"); // For Windows Only
@@ -142,7 +142,7 @@ int digits_sum(){
     printf("Enter Any Number: ");
     scanf("%d",&number);
 
-    for(i=number;i!=0;i/10){
+    for(i=number;i!=0;i=i/10){
         rem=i%10;
         sum=sum+rem;
     }
@@ -157,11 +157,11 @@ int number_reverser(bool check){
     printf("Enter Any Number: ");
     scanf("%d",&number);
 
-    for(i=number;i!=0;i/10){
+    for(i=number;i!=0;i=i/10){
         rem=i%10;
-        reversedNum+=(reversedNum*10)+rem;
+        reversedNum=(reversedNum*10)+rem;
     }
-    printf("The reverse of %d is %d",number,reversedNum);
+    printf("The reverse of %d is %d\n",number,reversedNum);
 
     if (check==true){
         if (reversedNum==number){
