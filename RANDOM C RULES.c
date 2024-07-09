@@ -65,7 +65,7 @@ Other Rules
   // Lets do it correctly.
 
   Eg:
-  char a = "A";
+  char a = 'A';
   if (a == 'A'){
     printf("True");
   } else {
