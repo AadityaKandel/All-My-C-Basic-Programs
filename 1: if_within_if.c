@@ -5,12 +5,12 @@
 // Basic if else syntax below:
 /*
 
-if (statement){
-    condition1;
-} else if (statement){
-    condition2;
+if (condition1){
+    statement1;
+} else if (condition2){
+    statement2;
 } else{
-    condition3;
+    statement3;
 }
 
 Note: You can add as many else if as you want but in one group of conditional statements (i.e if, else if, else), there can be only one if and else
