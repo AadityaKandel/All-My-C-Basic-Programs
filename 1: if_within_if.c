@@ -1,7 +1,9 @@
 // Showcasing the example of using if else within if else and else if statements
 // Also making a program that gets your total marks, calculates it in percentage and calculates your Division according to your percentage
 // Points to Remember
-// OR = ||     AND = &&     NOT = !
+// OR (||): Either condition can be true.
+// AND (&&): Both conditions must be true.
+// NOT (!): The condition must be false.
 // Basic if else syntax below:
 /*
 
@@ -19,47 +21,74 @@ for complex calculations, try to avoid using if within if. To use if within if, 
 
 Logic is simply like this... 
 
-Suppose there are two things you like: Apple & Orange. You have RS 200 but you don't know the price of either of these fruits.
-Suppose, that you like apple the most out of the two fruits
-Now, lets say that you created a method in your mind
-You said that:
+Imagine you have RS 200 and need to decide whether to buy apples or oranges. Here’s how you might use if-else statements to make this decision:
 
-if (apple costs less than or equal to RS 100){
-    I will buy apple
-    And I'll also check
-    if (orange costs less than or equal to RS 100){
-        I will also buy orange
-    else{
-        I will not buy orange
+If Apple Costs RS 100 or Less:
+    Buy the apple.
+    Check if the orange also costs RS 100 or less.
+        If yes, buy both fruits.
+        If no, buy only the apple.
+        
+If the Apple Costs More Than RS 100 but the Orange Costs RS 100 or Less:
+    Buy the orange.
+    Check if the apple costs RS 100 or less.
+        If yes, buy both fruits.
+        If no, buy only the orange.
+        If Both Fruits Cost More Than RS 100:
+
+Check if their prices are between RS 100 and RS 200.
+If the apple is within this range but the orange is not, buy the apple.
+
+If the orange is within this range but the apple is not, buy the orange.
+
+If both are within this range, buy the apple (since you like it more).
+
+If Both Fruits Cost More Than RS 200:
+    Don’t buy either fruit.
+
+// When Translated Into Code, The Above Description Looks Like:
+
+#include <stdio.h>
+int main() {
+    int applePrice, orangePrice;
+    int budget = 200;
+
+    // Input prices
+    printf("Enter the price of apple: ");
+    scanf("%d", &applePrice);
+    printf("Enter the price of orange: ");
+    scanf("%d", &orangePrice);
+
+    if (applePrice <= 100) {
+        printf("Buy apple.\n");
+        if (orangePrice <= 100) {
+            printf("Also buy orange.\n");
+        } else {
+            printf("Do not buy orange.\n");
+        }
+    } else if (orangePrice <= 100) {
+        printf("Buy orange.\n");
+        if (applePrice <= 100) {
+            printf("Also buy apple.\n");
+        } else {
+            printf("Do not buy apple.\n");
+        }
+    } else {
+        if (applePrice <= 200 && orangePrice <= 200) {
+            printf("Both fruits cost between 100 and 200.\n");
+            printf("Buy apple since you like it more.\n");
+        } else if (applePrice <= 200) {
+            printf("Buy apple.\n");
+        } else if (orangePrice <= 200) {
+            printf("Buy orange.\n");
+        } else {
+            printf("Do not buy any fruit.\n");
+        }
     }
-} else if (orange costs less than or equal to RS 100){
-    I will buy orange
-    And I'll also check
-    if (apple costs less than or equal to RS 100){
-        I will also buy apple
-    } else{
-        I will not buy apple
-    }
-} else{
-    if (apple is greater than 100 but it is less than 200){
-        I will buy apple only
-    } else if (orange is greater than 100 but it is less than 200) {
-        I will buy orange only
-    } else if (both apple and orange are greater than 100 and less than 200){
-        Since I like apple the most, I will buy apple
-    }
-    } else{
-        I will not buy anything
-    }
+
+    return 0;
 }
 
-This above statement said three things
-1: If apple's price is less than or equal to 100, you'll buy apple. Then you'll ask the shopkeeper if orange's price is also less than or equal to 100.
-    If the shopkeeper says yes, then you'll also buy orange but if the shopkeeper replies no, then you'll consider only buying apple.
-2: If orange's price is less than or equal to 100, you'll buy orange. Then you'll ask the shopkeeper if apple's price is also less than or equal to 100.
-    If the shopkeeper says yes, then you'll also buy apple but if the shopkeeper replies no, then you'll consider only buying orange.
-3: If both of the fruits are greater than 100, you'll check if they cost more than 200 or not. If apple costs more than 200 but orange costs less, you'll buy
-    orange and vice-versa. Now, comes the twist. If both of these cost less than 200 and more than 100, you'll buy the fruit that you like the most (Apple)
 
 */
 
