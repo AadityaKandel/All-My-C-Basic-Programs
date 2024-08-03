@@ -104,4 +104,79 @@ So, we are saying the C compiler to print the value of address of "x" variable w
 
 I hope you understood how pointer is connected to both the address and the value of "x" variable. We will be continuing this even further soon.
 This much for now!
+
+Lets move to stage 2 where we will learn about how we can change the value of a specific variable using a pointer variable.
+
+int *ptr;
+int x=2;
+ptr=&x;
+*ptr=3;
+printf("The value of x is %d\n",x);
+printf("The value of x is %d\n",*ptr);
+
+
+In the above example, both of the printf() function will print the same output as "3"
+This is because of one specific code "*ptr=3;" which, when translated to English says this:
+
+Value of a pointer variable pointing towards the address of x variable is equals to 3
+which indirectly means that the value inside the address of x variable is 3
+which directly means that x=3
+
+I hope you figured this out. In this way, no matter what kind of variable it is, you can simply
+modify it using pointers. 
+
+You might be wondering why we should use pointers when we can simply say "x=3" and print the value of x!?
+
+It is because of one rule of variable called "Variable have a fixed scope"
+where each variable defined under one function can only remain under that specific function and 
+cannot be modified outside the function or inside another function.
+
+Eg:
+#include <stdio.h>
+void modify(){
+  int hello=3;
+}
+int main(){
+  int hello=2;
+  modify();
+  printf("The value of hello variable is %d",hello);
+}
+
+The above code will throw an error called "hello variable is not defined" even though it is defined under the main() function.
+This is because the "hello" variable wil only remain defined under the main() function and cannot be accessed by 
+any other function out there. 
+
+
+Lets move to the topic. 
+
+#include <stdio.h>
+
+void update_x(int *add){
+  *add=4;
+}
+
+int main(){
+  int x=2;
+  update_x(&x);
+  printf("The value of x is %d\n",x);
+}
+
+In the above function, the variable "x" is being directly accessed by another function called "update_x()"
+The "update_x()" is asking for a pointer argument which takes the address of a variable as its value.
+
+Inside the main() function, we are passing the address of x variable to the "update_x()" function.
+i.e update_x(&x);
+
+Then, the update_x() function is taking the address of x variable and storing it under "add" pointer variable.
+Then, the add pointer varaible is being changed using the code "*add=4;" 
+In English, it is saying:
+
+The value of the address being pointed by the add variable is equals to 4
+which also means the value of address of x variable is equals to 4
+which directly means that the value of x is 4
+
+Thus, we are able to change the "x" variable using just the pointer without passing it or returning it.
+This is important especially while dealing with arrays. 
+
+This much for now. Further will be described soon.
 */
