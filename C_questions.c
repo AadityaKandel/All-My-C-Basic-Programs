@@ -1,6 +1,6 @@
 /*
 
-These are the questions from each Chapter that I've covered.
+These are the hardest question of each Chapter I've covered.
 
 A: nested if
 Write a C program to input two numbers, ask the user to select two modes: R & S. (R means Rectangle & S means Square)
