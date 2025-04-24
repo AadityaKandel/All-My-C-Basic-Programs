@@ -18,6 +18,7 @@ int main(){
         for(int z=1; z<i; z++){
             if(i%z==0){
                 count++;
+                if(count>1){break;}
             }
         }
 
