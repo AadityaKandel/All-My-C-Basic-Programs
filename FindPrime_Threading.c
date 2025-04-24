@@ -25,6 +25,7 @@ int PrimeLogic(int thread_index) {
         for (int z = 1; z <= i; z++) {
             if (i % z == 0)
                 count++;
+                if(count>2){break;}
         }
 
         if (count == 2) {
